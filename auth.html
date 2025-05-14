@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyJett</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <a class="auth__back wah_click" href="/auth.html" hidden>
+        <img src="icons/auth-back.svg" alt="назад">
+    </a>
+    <div class="auth__container">
+        <div class="auth__switch-box">
+            <button class="auth__switch-box__item sign-up active-link wah_click">Регистрация</button>
+            <button class="auth__switch-box__item sign-in wah_click">Вход</button>
+        </div>
+        <form class="auth__form__sign-up auth">
+            <input type="text" class="auth__form__input" name="name" placeholder="Имя" required>
+            <input type="email" class="auth__form__input" name="email" placeholder="e-mail" required>
+            <input type="tel" class="auth__form__input" name="tel" placeholder="Телефон" required>
+            <div class="auth__form__input-box">
+                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" required>
+                <div class="auth__form__input-box__switch"><img src="icons/eye-close.svg" alt="скрыт"></div>
+            </div>
+            <button type="submit" class="auth__form__submit wah_click">Регистрация</button>
+        </form>
+        <form class="auth__form__sign-in auth" style="display: none;">
+            <input type="email" class="auth__form__input" name="email" placeholder="e-mail" required>
+            <div class="auth__form__input-box">
+                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" required>
+                <div class="auth__form__input-box__switch"><img src="icons/eye-close.svg" alt="скрыт"></div>
+            </div>
+            <button type="submit" class="auth__form__submit wah_click">Вход</button>
+        </form>
+    </div>
+    <div class="gradient-half"></div>
+</body>
+</html>
