@@ -2,12 +2,12 @@
 
 
 if (localStorage.getItem("auth")){
-    if (location.pathname == "/auth.html"){
-        location.pathname = "/";
+    if (location.pathname.endsWith == "/auth.html"){
+        location.pathname = "SkyJett/";
     }
 }else{
-    if (location.pathname != "/auth.html"){
-        location.pathname = "/auth.html";
+    if (location.pathname.endsWith != "/auth.html"){
+        location.pathname = "SkyJett/auth.html";
     }
 }
 
@@ -19,7 +19,7 @@ const flights = [
 
 window.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector("body");
-    if (location.pathname == "/auth.html"){
+    if (location.pathname.endsWith == "/auth.html"){
         const container = document.querySelector(".auth__container");
         const sign_up = document.querySelector(".auth__form__sign-up");
         const sign_in = document.querySelector(".auth__form__sign-in");
@@ -45,11 +45,11 @@ window.addEventListener("DOMContentLoaded", () => {
                     users.append({name: name, email: email, phone: phone, password: password});
                     localStorage.setItem("users", JSON.stringify(users));
                     localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
-                    location.pathname = "/";
+                    location.pathname = "SkyJett/";
                 }else{
                     localStorage.setItem("users", JSON.stringify([{name: name, email: email, phone: phone, password: password}]));
                     localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
-                    location.pathname = "/";
+                    location.pathname = "SkyJett/";
                 }
             };
         });
@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     users.forEach(e => {
                         if (e.email == email && e.password == password){
                             localStorage.setItem("auth", JSON.stringify({name: e.name, email: email}));
-                            location.pathname = "/";
+                            location.pathname = "SkyJett/";
                             found = true;
                         }
                     });
@@ -149,7 +149,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     
     const checkLocate = () => {
-        const loc = location.pathname.replace("/", "").replace(".html", "");
+        const loc = location.pathname.replace("SkyJett/", "").replace(".html", "");
         const links = document.querySelectorAll("nav ul li");
         if (loc){
             links.forEach(e => {
