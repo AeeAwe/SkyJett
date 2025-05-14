@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     
     const checkLocate = () => {
-        const loc = location.pathname.replace("SkyJett/", "").replace(".html", "");
+        const loc = location.pathname.replace("/", "").replace(".html", "");
         const links = document.querySelectorAll("nav ul li");
         if (loc){
             links.forEach(e => {
