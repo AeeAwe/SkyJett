@@ -1,11 +1,11 @@
 "use strict";
 
 if (localStorage.getItem("auth")){
-    if (location.pathname = "/auth.html"){
+    if (location.pathname == "/auth.html"){
         location.href = "./";
     }
 }else{
-    if (!location.pathname = "/auth.html"){
+    if (!location.pathname == "/auth.html"){
         location.href = "./auth.html";
     }
 }
