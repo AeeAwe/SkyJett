@@ -2,11 +2,11 @@
 
 if (localStorage.getItem("auth")){
     if (location.pathname.endsWith("/auth.html")){
-        location.pathname = "./";
+        location.href = "./";
     }
 }else{
     if (!location.pathname.endsWith("/auth.html")){
-        location.pathname = "./auth.html";
+        location.href = "./auth.html";
     }
 }
 
@@ -44,11 +44,11 @@ window.addEventListener("DOMContentLoaded", () => {
                     users.append({name: name, email: email, phone: phone, password: password});
                     localStorage.setItem("users", JSON.stringify(users));
                     localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
-                    location.pathname = "./";
+                    location. = "./";
                 }else{
                     localStorage.setItem("users", JSON.stringify([{name: name, email: email, phone: phone, password: password}]));
                     localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
-                    location.pathname = "./";
+                    location.href = "./";
                 }
             };
         });
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     users.forEach(e => {
                         if (e.email == email && e.password == password){
                             localStorage.setItem("auth", JSON.stringify({name: e.name, email: email}));
-                            location.pathname = "./";
+                            location.href = "./";
                             found = true;
                         }
                     });
