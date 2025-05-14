@@ -4,10 +4,12 @@ console.log(location.href)
 
 if (localStorage.getItem("auth")){
     if (location.pathname == "/auth.html"){
+        console.log("AUTHED")
         location.href = "./";
     }
 }else{
     if (location.pathname != "/auth.html"){
+        console.log("NOT AUTHED")
         location.href = "./auth.html";
     }
 }
