@@ -1,12 +1,11 @@
 "use strict";
 
-
 if (localStorage.getItem("auth")){
-    if (location.pathname.endsWith == "/auth.html"){
+    if (location.pathname.endsWith("/auth.html")){
         location.pathname = "SkyJett/";
     }
 }else{
-    if (location.pathname.endsWith != "/auth.html"){
+    if (location.pathname.endsWith("/auth.html")){
         location.pathname = "SkyJett/auth.html";
     }
 }
@@ -19,7 +18,7 @@ const flights = [
 
 window.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector("body");
-    if (location.pathname.endsWith == "/auth.html"){
+    if (location.pathname.endsWith("/auth.html")){
         const container = document.querySelector(".auth__container");
         const sign_up = document.querySelector(".auth__form__sign-up");
         const sign_in = document.querySelector(".auth__form__sign-in");
