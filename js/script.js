@@ -5,7 +5,7 @@ if (localStorage.getItem("auth")){
         location.pathname = "SkyJett/";
     }
 }else{
-    if (location.pathname.endsWith("/auth.html")){
+    if (!location.pathname.endsWith("/auth.html")){
         location.pathname = "SkyJett/auth.html";
     }
 }
