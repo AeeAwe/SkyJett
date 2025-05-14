@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     users.append({name: name, email: email, phone: phone, password: password});
                     localStorage.setItem("users", JSON.stringify(users));
                     localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
-                    location. = "./";
+                    location.href = "./";
                 }else{
                     localStorage.setItem("users", JSON.stringify([{name: name, email: email, phone: phone, password: password}]));
                     localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
