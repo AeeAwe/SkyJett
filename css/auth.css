@@ -104,3 +104,14 @@ html button {
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
     z-index: -1;
 }
+
+.active-link {
+  border-bottom: 5px solid #33BBFF;
+}
+
+.wah_click {
+  transition: 0.3s all;
+}
+.wah_click:active {
+  transform: scale(0.95);
+}
