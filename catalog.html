@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyJett</title>
+    <title>SkyJett - Каталог</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
-       ym(101844372, "init", {
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+        ym(101844372, "init", {
             clickmap:true,
             trackLinks:true,
             accurateTrackBounce:true,
             webvisor:true
-       });
+        });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/101844372" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9NP34SHMK"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-F9NP34SHMK');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-F9NP34SHMK');
     </script>
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </head>
 <body>
     <div class="app">
@@ -47,11 +47,13 @@
                     <li class="app__header__nav-item"><a href="catalog.html">Каталог рейсов</a></li>
                     <li class="app__header__nav-item"><a href="#portfolio">Портфолио услуг</a></li>
                     <li class="app__header__nav-item" style="display: none;"><a href="#admin">Админ панель</a></li>
+                    <li class="app__header__nav-item app__header-profile">
+                        <a href="profile.html">
+                            <img src="icons/profile.svg" alt="профиль">
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <a href="#profile" class="app__header-profile">
-                <img src="icons/profile.svg" alt="профиль">
-            </a>
         </header>
         <main class="container catalog__main">
             <div class="catalog__main__filter">
@@ -61,56 +63,7 @@
                 <input type="number" class="catalog__main__fliter__input input-to" placeholder="До: 50 000₽">
                 <button class="catalog__main__fliter__submit">Фильтровать</button>
             </div>
-            <div class="catalog__main__cards">
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-                <div class="app__popular__cards-container__card">
-                    <span class="app__popular__cards-container__card-route">Москва — Пекин</span>
-                    <span class="app__popular__cards-container__card-type">Пассажирский</span>
-                    <span class="app__popular__cards-container__card-cost">От 19 500₽</span>
-                    <a class="app__popular__cards-container__card-details" href="flight.html">Подробнее</a>
-                </div>
-            </div>
+            <div class="catalog__main__cards"></div>
         </main>
         <footer class="app__footer">
             <div class="app__footer__container">

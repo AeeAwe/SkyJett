@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyJett</title>
+    <title>SkyJett - Вход</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
-       ym(101844372, "init", {
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+        ym(101844372, "init", {
             clickmap:true,
             trackLinks:true,
             accurateTrackBounce:true,
             webvisor:true
-       });
+        });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/101844372" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9NP34SHMK"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-F9NP34SHMK');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-F9NP34SHMK');
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
 </head>
 <body>
-    <a class="auth__back wah_click" href="/auth.html" hidden>
+    <a class="auth__back wah_click" href="./">
         <img src="icons/auth-back.svg" alt="назад">
     </a>
     <div class="auth__container">
@@ -48,9 +48,9 @@
         <form class="auth__form__sign-up auth">
             <input type="text" class="auth__form__input" name="name" placeholder="Имя" required>
             <input type="email" class="auth__form__input" name="email" placeholder="e-mail" required>
-            <input type="tel" class="auth__form__input" name="tel" placeholder="Телефон" required>
+            <input type="tel" class="auth__form__input" name="tel" placeholder="Телефон" minlength="18" required>
             <div class="auth__form__input-box">
-                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" required>
+                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" minlength="4" maxlength="16" required>
                 <div class="auth__form__input-box__switch"><img src="icons/eye-close.svg" alt="скрыт"></div>
             </div>
             <button type="submit" class="auth__form__submit wah_click">Регистрация</button>
@@ -58,7 +58,7 @@
         <form class="auth__form__sign-in auth" style="display: none;">
             <input type="email" class="auth__form__input" name="email" placeholder="e-mail" required>
             <div class="auth__form__input-box">
-                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" required>
+                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" minlength="4" maxlength="16" required>
                 <div class="auth__form__input-box__switch"><img src="icons/eye-close.svg" alt="скрыт"></div>
             </div>
             <button type="submit" class="auth__form__submit wah_click">Вход</button>

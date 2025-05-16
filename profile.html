@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyJett - Профиль</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+        ym(101844372, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101844372" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9NP34SHMK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-F9NP34SHMK');
+    </script>
+    <script type="module" src="js/script.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="container app__header">
+            <a href="./" class="app__header-logo">
+                <img src="icons/logo.svg" alt="логотип">
+            </a>
+            <nav class="app__header__nav">
+                <ul>
+                    <li class="app__header__nav-item"><a href="catalog.html">Каталог рейсов</a></li>
+                    <li class="app__header__nav-item"><a href="#portfolio">Портфолио услуг</a></li>
+                    <li class="app__header__nav-item" style="display: none;"><a href="#admin">Админ панель</a></li>
+                    <li class="app__header__nav-item app__header-profile">
+                        <a href="profile.html">
+                            <img src="icons/profile.svg" alt="профиль">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="profile-section">
+            <h2>Профиль пользователя</h2>
+
+            <div class="profile-info">
+                <p><strong>Имя:</strong></p>
+                <p><strong>Телефон:</strong></p>
+                <p><strong>Email:</strong></p>
+            </div>
+
+            <div class="profile-actions">
+                <button class="btn edit">Изменить данные</button>
+                <button class="btn logout">Выйти</button>
+            </div>
+
+            <h3>Забронированные рейсы</h3>
+
+            <div class="flights">
+                <span style="text-align: center;">Пока ничего нет</span>
+            </div>
+        </section>
+        <footer class="app__footer">
+            <div class="app__footer__container">
+                <div class="app__footer__container__box"></div>
+                <span> 
+                    Designed by AeeAwe<br>
+                    © SkyJett 2025
+                </span>
+            </div>
+            <img src="icons/footer-sign.svg" alt="sign">
+        </footer>
+    </div>
+</body>
+</html>
