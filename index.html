@@ -38,54 +38,184 @@
 </head>
 <body>
     <div class="app">
-        <header class="container app__header">
-            <a href="./" class="app__header-logo" aria-label="Вернуться на главную">
-                <img src="icons/logo.svg" alt="логотип">
-            </a>
-            <nav class="app__header__nav">
-                <ul>
-                    <li class="app__header__nav-item"><a href="catalog.html">Каталог рейсов</a></li>
-                    <li class="app__header__nav-item"><a href="#portfolio">Портфолио услуг</a></li>
-                    <li class="app__header__nav-item" style="display: none;"><a href="#admin">Админ панель</a></li>
-                    <li class="app__header__nav-item app__header-profile">
-                        <a href="profile.html" aria-label="Профиль">
-                            <img src="icons/profile.svg" alt="профиль">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section class="container app__welcome">
-            <h1 class="app__welcome-title">Добро пожаловать в SkyJett — Ваше небо без границ</h1>
-            <div class="app__welcome__text">
-                <p class="app__welcome__text-description">
-                    SkyJett — это надёжная авиакомпания, предоставляющая широкий спектр авиационных услуг: от пассажирских перелётов до аренды частных самолётов и грузовых авиаперевозок.
-                    Мы работаем для частных клиентов, корпоративных партнёров и логистических компаний, которым важны скорость, комфорт и безупречная репутация перевозчика.
-                </p>
-                <div class="app__welcome__text-advantages">
-                    Почему выбирают SkyJett:
-                    <ul>
-                        <li>✈ Гибкость и персональный подход — индивидуальные решения под любые запросы;</li>
-                        <li>🔒 Безопасность и надёжность — современный авиапарк и опытные пилоты;</li>
-                        <li>🕒 Пунктуальность и скорость — оптимальные маршруты и точность в каждой детали;</li>
-                        <li>🌍 Международный охват — работаем по всему миру, доставляем в срок.</li>
-                    </ul>
+        <header class="app-header">
+            <div class="container header-container">
+                <div class="app-logo">
+                    <a href="./"><img src="icons/app-logo.svg" alt="logo" loading="lazy"></a>
+                </div>
+                <nav class="header-nav">
+                    <a href="./">Главная</a>
+                    <a href="flights.html">Рейсы</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="reviews.html">Отзывы</a>
+                </nav>
+                <div class="header-login">
+                    <a href="auth.html">Войти</a>
                 </div>
             </div>
-        </section>
-        <section class="container app__popular">
-            <h1 class="app__popular-title">Популярные маршруты и услуги</h1>
-            <div class="app__popular__cards-container"></div>
-        </section>
-        <footer class="app__footer">
-            <div class="app__footer__container">
-                <div class="app__footer__container__box"></div>
-                <span> 
-                    Designed by AeeAwe<br>
-                    © SkyJett 2025
-                </span>
+        </header>
+        <main class="app-main">
+            <div class="container main-container">
+                <section class="welcome-section">
+                    <div class="welcome-container">
+                        <h2 class="welcome-title">Добро пожаловать в SkyJett</h2>
+                        <p class="welcome-subtitle">Ваш надежный партнер для комфортных и безопасных путешествий по всему миру. Мы предлагаем высококлассный сервис, современный флот и гибкие тарифы.</p>
+                        <div class="welcome-btns">
+                            <div class="btn"><a href="flights.html">Забронировать рейс</a></div>
+                            <div class="btn btn-white"><a href="flights.html">Посмотреть маршруты</a></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="app-section advantages-section">
+                    <h2 class="section-title advantages-title">Наши преимущества</h2>
+                    <div class="cards-container">
+                        <div class="cards-item">
+                            <div class="cards-icon">⭐</div>
+                            <h3 class="cards-title">Высокий уровень сервиса</h3>
+                            <p class="cards-subtitle">Профессиональный и внимательный персонал, готовый помочь вам в любой ситуации.</p>
+                        </div>
+                        <div class="cards-item">
+                            <div class="cards-icon">🛡</div>
+                            <h3 class="cards-title">Безопасность</h3>
+                            <p class="cards-subtitle">Современный флот и строгое соблюдение всех стандартов безопасности.</p>
+                        </div>
+                        <div class="cards-item">
+                            <div class="cards-icon">💰</div>
+                            <h3 class="cards-title">Выгодные тарифы</h3>
+                            <p class="cards-subtitle">Гибкая система тарифов и специальные предложения для постоянных клиентов.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="app-section popular-section">
+                    <h2 class="section-title popular-title">Популярные маршруты</h2>
+                    <div class="cards-container">
+                        <div class="cards-item short-v-flight">
+                            <div class="short-v-img"><img src="imgs/flight1.png" alt="flight-img" loading="lazy"></div>
+                            <div class="short-v-content">
+                                <div class="short-v-container">
+                                    <h3 class="short-v-title">Москва — Санкт-Петербург</h3>
+                                    <span class="short-v-price">5600 ₽</span>
+                                </div>
+                                <div class="short-v-time">2025-12-15 • 09:30 - 11:00</div>
+                                <div class="btn"><a href="flight.html?id=1">Подробнее</a></div>
+                            </div>
+                        </div>
+                        <div class="cards-item short-v-flight">
+                            <div class="short-v-img"><img src="imgs/flight2.png" alt="flight-img" loading="lazy"></div>
+                            <div class="short-v-content">
+                                <div class="short-v-container">
+                                    <h3 class="short-v-title">Москва — Сочи</h3>
+                                    <span class="short-v-price">7800 ₽</span>
+                                </div>
+                                <div class="short-v-time">2023-12-16 • 12:45 - 15:15</div>
+                                <div class="btn"><a href="flight.html?id=2">Подробнее</a></div>
+                            </div>
+                        </div>
+                        <div class="cards-item short-v-flight">
+                            <div class="short-v-img"><img src="imgs/flight3.png" alt="flight-img" loading="lazy"></div>
+                            <div class="short-v-content">
+                                <div class="short-v-container">
+                                    <h3 class="short-v-title">Санкт-Петербург - Калининград</h3>
+                                    <span class="short-v-price">6200 ₽</span>
+                                </div>
+                                <div class="short-v-time">2023-12-17 • 08:15 - 09:45</div>
+                                <div class="btn"><a href="flight.html?id=3">Подробнее</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn btn-light"><a href="flights.html">Посмотреть все маршруты</a></div>
+                </section>
+                <section class="app-section services-section">
+                    <h2 class="section-title services-title">Наши услуги</h2>
+                    <div class="cards-container">
+                        <div class="cards-item">
+                            <div class="cards-icon">👨‍👩‍👧‍👦</div>
+                            <h3 class="cards-title">Пассажирские перевозки</h3>
+                            <p class="cards-subtitle">Комфортные перелеты для вас и вашей семьи с высоким уровнем сервиса.</p>
+                            <a href="services.html" class="cards-link">Подробнее →</a>
+                        </div>
+                        <div class="cards-item">
+                            <div class="cards-icon">📦</div>
+                            <h3 class="cards-title">Грузовые перевозки</h3>
+                            <p class="cards-subtitle">Быстрая и надежная доставка грузов в любую точку нашей маршрутной сети.</p>
+                            <a href="services.html" class="cards-link">Подробнее →</a>
+                        </div>
+                        <div class="cards-item">
+                            <div class="cards-icon">✉️</div>
+                            <h3 class="cards-title">Почтовые отправления</h3>
+                            <p class="cards-subtitle">Оперативная доставка почты и документов с гарантией сохранности.</p>
+                            <a href="services.html" class="cards-link">Подробнее →</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="app-section contacts-section">
+                    <h2 class="section-title contacts-title">Контактная информация</h2>
+                    <div class="cards-container">
+                        <div class="cards-item contacts-card">
+                            <div class="cards-icon">📞</div>
+                            <h3 class="cards-title">Телефон</h3>
+                            <a href="tel:+7 (800) 123-45-67" class="contacts-card-item">+7 (800) 123-45-67</a>
+                            <p class="contacts-card-item">Ежедневно с 8:00 до 20:00</p>
+                        </div>
+                        <div class="cards-item contacts-card">
+                            <div class="cards-icon">✉</div>
+                            <h3 class="cards-title">Email</h3>
+                            <a href="mailto:info@skyjett.ru" class="contacts-card-item">info@skyjett.ru</a>
+                            <a href="mailto:support@skyjett.ru" class="contacts-card-item">support@skyjett.ru</a>
+                        </div>
+                        <div class="cards-item contacts-card">
+                            <div class="cards-icon">🏢</div>
+                            <h3 class="cards-title">Офис</h3>
+                            <p class="contacts-card-item">г. Москва, ул. Авиационная, 15</p>
+                            <p class="contacts-card-item">Пн-Пт: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <img src="icons/footer-sign.svg" alt="sign">
+        </main>
+        <footer class="app-footer">
+            <div class="container footer-container">
+                <div class="footer-nav-container">
+                    <div class="footer-nav-item">
+                        <div class="app-logo">
+                            <a href="./"><img src="icons/app-logo.svg" alt="logo"></a>
+                        </div>
+                        <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
+                        <div class="footer-nav-social">
+                            <div class="social-item"><a href="#"><img src="icons/facebook.svg" alt="facebook" loading="lazy"></a></div>
+                            <div class="social-item"><a href="#"><img src="icons/instagram.svg" alt="instagram" loading="lazy"></a></div>
+                            <div class="social-item"><a href="#"><img src="icons/x.svg" alt="x" loading="lazy"></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Информация</h3>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Рейсы</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Контакты</h3>
+                        <ul>
+                            <li><span>📞</span><a href="tel:+7 (800) 123-45-67">+7 (800) 123-45-67</a></li>
+                            <li><span>✉</span><a href="mailto:info@skyjett.ru">info@skyjett.ru</a></li>
+                            <li><span>🏢</span>г. Москва, ул. Авиационная, 15</li>
+                            <li><span>🕒</span>Пн-Пт: 9:00 - 18:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Подписка</h3>
+                        <p>Подпишитесь на нашу рассылку, чтобы получать информацию о специальных предложениях и акциях.</p>
+                        <form class="footer-nav-subcription">
+                            <input type="email" placeholder="Ваш email">
+                            <button>→</button>
+                        </form>
+                    </div>
+                </div>
+                <p class="footer-sign">© 2025 SkyJett. Все права защищены.</p>
+            </div>
         </footer>
     </div>
 </body>
