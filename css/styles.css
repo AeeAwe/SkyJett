@@ -8,6 +8,7 @@
     --light-grey: #E5E7EB;
     --grey: #9CA3AF;
     --dark-grey: #1F2937;
+    --green: #16A34A;
 }
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -41,22 +42,20 @@ p, h1, h2, h3 {
     border-radius: 8px;
     background-color: var(--base-ligher);
     font-weight: 600;
-}
-.btn a {
     color: var(--w);
     padding: 12px 24px;
+    text-align: center;
 }
 .btn-white {
     background-color: var(--w);
-}
-.btn-white a {
     color: var(--base-color);
 }
 .btn-light {
     background-color: var(--bg-darker);
-}
-.btn-light a{
     color: var(--base-color);
+}
+.btn-green {
+    background-color: var(--green);
 }
 
 .app-header {
@@ -67,6 +66,7 @@ p, h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 16px;
 }
 .header-nav {
     display: flex;
@@ -94,7 +94,7 @@ p, h1, h2, h3 {
     gap: 64px;
 }
 .welcome-section {
-    background: linear-gradient(90deg, rgba(30, 58, 138, 0.9) 0%, rgba(30, 58, 138, 0.7) 100%), url("../imgs/welcome-bg.webp");
+    background: linear-gradient(90deg, rgba(30, 58, 138, 0.9) 0%, rgba(30, 58, 138, 0.7) 100%), url("../imgs/welcome-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -121,6 +121,7 @@ p, h1, h2, h3 {
 }
 .welcome-btns {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
@@ -140,6 +141,8 @@ p, h1, h2, h3 {
 }
 .cards-container {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 24px;
 }
 .cards-item {
@@ -149,6 +152,7 @@ p, h1, h2, h3 {
     background-color: var(--w);
     padding: 24px;
     border-radius: 12px;
+    margin: 0 auto;
     overflow: hidden;
 }
 .cards-icon {
@@ -173,7 +177,11 @@ p, h1, h2, h3 {
 .popular-section .btn-light {
     margin: 0 auto;
 }
+.popular-section .cards-container {
+    padding: 0 16px;
+}
 .short-v-flight {
+    max-width: 470px;
     border: 1px solid var(--light-grey);
     padding: 0;
 }
@@ -230,6 +238,119 @@ p, h1, h2, h3 {
 }
 
 
+
+.filter-section {
+    background-color: var(--w);
+    border-radius: 12px;
+    padding: 24px;
+}
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.filter-item-container {
+    display: flex;
+    gap: 16px;
+}
+.filter-item {
+    width: 100%;
+}
+.filter-item label {
+    display: block;
+    margin-bottom: 8px;
+}
+.filter-item input, select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 17px;
+}
+
+.flights-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.flights-card {
+    width: 100%;
+    display: flex;
+    background-color: var(--w);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.flight-img {
+    width: calc(100%/4);
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flight-img img {
+    display: block;
+    width: 100%;
+}
+.flight-card-container {
+    box-sizing: border-box;
+    padding: 24px;
+}
+.flight-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+}
+.flight-info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.in-way {
+    height: fit-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: var(--bg-darker);
+    color: var(--base-color);
+}
+.flight-class {
+    height: fit-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+.flight-type {
+    color: var(--grey);
+}
+.flight-control {
+    width: calc(100%/4);
+    border-left: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+.flight-control-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+.flight-control-cost {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: auto;
+}
+.flight-control-cost {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: auto;
+    color: var(--base-color);
+}
+.flight-control-places {
+    margin-left: auto;
+}
+
+
 .app-footer {
     background-color: var(--base-dark);
 }
@@ -243,6 +364,8 @@ p, h1, h2, h3 {
 .footer-nav-container {
     display: flex;
     justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 .footer-nav-item {
     max-width: 352px;

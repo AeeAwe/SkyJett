@@ -3,38 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyJett - Главная</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="description" content="Удобный сервис для поиска и бронирования авиабилетов. Найдите лучшие предложения и начните своё путешествие уже сегодня.">
+    <title>SkyJett — Главная</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        
-        ym(101844372, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101844372" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9NP34SHMK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-F9NP34SHMK');
-    </script>
-<!--     <script type="module" src="js/script.js"></script> -->
 </head>
 <body>
     <div class="app">
@@ -45,9 +16,9 @@
                 </div>
                 <nav class="header-nav">
                     <a href="./">Главная</a>
-                    <a href="catalog.html">Рейсы</a>
-                    <a href="#">Услуги</a>
-                    <a href="#">Отзывы</a>
+                    <a href="flights.html">Рейсы</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="reviews.html">Отзывы</a>
                 </nav>
                 <div class="header-login">
                     <a href="auth.html">Войти</a>
@@ -61,8 +32,8 @@
                         <h2 class="welcome-title">Добро пожаловать в SkyJett</h2>
                         <p class="welcome-subtitle">Ваш надежный партнер для комфортных и безопасных путешествий по всему миру. Мы предлагаем высококлассный сервис, современный флот и гибкие тарифы.</p>
                         <div class="welcome-btns">
-                            <div class="btn"><a href="flights.html">Забронировать рейс</a></div>
-                            <div class="btn btn-white"><a href="flights.html">Посмотреть маршруты</a></div>
+                            <a href="flights.html" class="btn">Забронировать рейс</a>
+                            <a href="flights.html" class="btn btn-white">Посмотреть маршруты</a>
                         </div>
                     </div>
                 </section>
@@ -90,40 +61,40 @@
                     <h2 class="section-title popular-title">Популярные маршруты</h2>
                     <div class="cards-container">
                         <div class="cards-item short-v-flight">
-                            <div class="short-v-img"><img src="imgs/flight1.webp" alt="flight-img" loading="lazy"></div>
+                            <div class="short-v-img"><img src="imgs/flight1.png" alt="flight-img" loading="lazy"></div>
                             <div class="short-v-content">
                                 <div class="short-v-container">
                                     <h3 class="short-v-title">Москва — Санкт-Петербург</h3>
                                     <span class="short-v-price">5600 ₽</span>
                                 </div>
-                                <div class="short-v-time">2025-12-15 • 09:30 - 11:00</div>
-                                <div class="btn"><a href="flight.html?id=1">Подробнее</a></div>
+                                <span class="short-v-time">2025-12-15 • 09:30 - 11:00</span>
+                                <a href="flight.html?id=1" class="btn">Подробнее</a>
                             </div>
                         </div>
                         <div class="cards-item short-v-flight">
-                            <div class="short-v-img"><img src="imgs/flight2.webp" alt="flight-img" loading="lazy"></div>
+                            <div class="short-v-img"><img src="imgs/flight2.png" alt="flight-img" loading="lazy"></div>
                             <div class="short-v-content">
                                 <div class="short-v-container">
                                     <h3 class="short-v-title">Москва — Сочи</h3>
                                     <span class="short-v-price">7800 ₽</span>
                                 </div>
-                                <div class="short-v-time">2023-12-16 • 12:45 - 15:15</div>
-                                <div class="btn"><a href="flight.html?id=2">Подробнее</a></div>
+                                <span class="short-v-time">2023-12-16 • 12:45 - 15:15</span>
+                                <a href="flight.html?id=2" class="btn">Подробнее</a>
                             </div>
                         </div>
                         <div class="cards-item short-v-flight">
-                            <div class="short-v-img"><img src="imgs/flight3.webp" alt="flight-img" loading="lazy"></div>
+                            <div class="short-v-img"><img src="imgs/flight3.png" alt="flight-img" loading="lazy"></div>
                             <div class="short-v-content">
                                 <div class="short-v-container">
                                     <h3 class="short-v-title">Санкт-Петербург - Калининград</h3>
                                     <span class="short-v-price">6200 ₽</span>
                                 </div>
-                                <div class="short-v-time">2023-12-17 • 08:15 - 09:45</div>
-                                <div class="btn"><a href="flight.html?id=3">Подробнее</a></div>
+                                <span class="short-v-time">2023-12-17 • 08:15 - 09:45</span>
+                                <a href="flight.html?id=3" class="btn">Подробнее</a>
                             </div>
                         </div>
                     </div>
-                    <div class="btn btn-light"><a href="flights.html">Посмотреть все маршруты</a></div>
+                    <a href="flights.html" class="btn btn-light">Посмотреть все маршруты</a>
                 </section>
                 <section class="app-section services-section">
                     <h2 class="section-title services-title">Наши услуги</h2>
@@ -180,7 +151,7 @@
                         <div class="app-logo">
                             <a href="./"><img src="icons/app-logo.svg" alt="logo"></a>
                         </div>
-                        <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
+                        <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
                         <div class="footer-nav-social">
                             <div class="social-item"><a href="#"><img src="icons/facebook.svg" alt="facebook" loading="lazy"></a></div>
                             <div class="social-item"><a href="#"><img src="icons/instagram.svg" alt="instagram" loading="lazy"></a></div>
@@ -191,7 +162,7 @@
                         <h3 class="footer-nav-title">Информация</h3>
                         <ul>
                             <li><a href="#">О компании</a></li>
-                            <li><a href="catalog.html">Рейсы</a></li>
+                            <li><a href="#">Рейсы</a></li>
                             <li><a href="#">Услуги</a></li>
                             <li><a href="#">Отзывы</a></li>
                         </ul>

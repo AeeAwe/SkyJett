@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сравните доступные авиарейсы по вашему маршруту. Удобный фильтр, актуальные цены и быстрая бронь.">
+    <title>SkyJett — Каталог рейсов</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div class="container header-container">
+                <div class="app-logo">
+                    <a href="./"><img src="icons/app-logo.svg" alt="logo" loading="lazy"></a>
+                </div>
+                <nav class="header-nav">
+                    <a href="./">Главная</a>
+                    <a href="flights.html">Рейсы</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="reviews.html">Отзывы</a>
+                </nav>
+                <div class="header-login">
+                    <a href="auth.html">Войти</a>
+                </div>
+            </div>
+        </header>
+        <main class="app-main">
+            <div class="container main-container">
+                <section class="app-section">
+                    <h2 class="section-title">Каталог рейсов</h2>
+                    <section class="filter-section">
+                        <div class="filter-container">
+                            <h3 class="cards-title filter-title">Поиск и филтьтрация</h3>
+                            <div class="filter-item-container">
+                                <div class="filter-item">
+                                    <label for="from">Откуда</label>
+                                    <input type="text" placeholder="Город вылета" id="from">
+                                </div>
+                                <div class="filter-item">
+                                    <label for="to">Куда</label>
+                                    <input type="text" placeholder="Город прилета" id="to">
+                                </div>
+                                <div class="filter-item">
+                                    <label for="date">Дата</label>
+                                    <input type="date" id="date">
+                                </div>
+                            </div>
+                            <div class="filter-item-container">
+                                <div class="filter-item">
+                                    <label for="type">Тип перевозки</label>
+                                    <select id="type">
+                                        <option value="all">Все типы</option>
+                                        <option value="passenger">Пассажирский</option>
+                                        <option value="cargo">Грузовой</option>
+                                        <option value="post">Почтовый</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <label for="class">Класс</label>
+                                    <select id="class">
+                                        <option value="all">Все классы</option>
+                                        <option value="first">Первый</option>
+                                        <option value="business">Бизнес</option>
+                                        <option value="economy">Эконом</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="flights-section">
+                        <div class="flights-card">
+                            <div class="flight-img"><img src="imgs/flight1.png" alt="flight-img"></div>
+                            <div class="flight-card-container flight-info">
+                                <div class="flight-info-container">
+                                    <div>
+                                        <h3 class="cards-title">Москва — Санкт-Петербург</h3>
+                                        <span class="flight-info-inway">2025-12-15 • 09:30 - 11:00</span>
+                                    </div>
+                                    <span class="in-way">1ч 30м</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-class">Эконом</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-type">Тип: Пассажирский</span>
+                                    <span class="flight-type">Багаж: 23 кг</span>
+                                </div>
+                            </div>
+                            <div class="flight-control">
+                                <div class="flight-control-item">
+                                    <span class="flight-control-cost">7800 ₽</span>
+                                    <span class="flight-control-places">Осталось мест: 180</span>
+                                </div>
+                                <div class="flight-control-item">
+                                    <a href="flight.html" class="btn">Подробнее</a>
+                                    <a href="#" class="btn btn-green">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flights-card">
+                            <div class="flight-img"><img src="imgs/flight1.png" alt="flight-img"></div>
+                            <div class="flight-card-container flight-info">
+                                <div class="flight-info-container">
+                                    <div>
+                                        <h3 class="cards-title">Москва — Санкт-Петербург</h3>
+                                        <span class="flight-info-inway">2025-12-15 • 09:30 - 11:00</span>
+                                    </div>
+                                    <span class="in-way">1ч 30м</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-class">Эконом</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-type">Тип: Пассажирский</span>
+                                    <span class="flight-type">Багаж: 23 кг</span>
+                                </div>
+                            </div>
+                            <div class="flight-control">
+                                <div class="flight-control-item">
+                                    <span class="flight-control-cost">7800 ₽</span>
+                                    <span class="flight-control-places">Осталось мест: 180</span>
+                                </div>
+                                <div class="flight-control-item">
+                                    <a href="flight.html" class="btn">Подробнее</a>
+                                    <a href="#" class="btn btn-green">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flights-card">
+                            <div class="flight-img"><img src="imgs/flight1.png" alt="flight-img"></div>
+                            <div class="flight-card-container flight-info">
+                                <div class="flight-info-container">
+                                    <div>
+                                        <h3 class="cards-title">Москва — Санкт-Петербург</h3>
+                                        <span class="flight-info-inway">2025-12-15 • 09:30 - 11:00</span>
+                                    </div>
+                                    <span class="in-way">1ч 30м</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-class">Эконом</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-type">Тип: Пассажирский</span>
+                                    <span class="flight-type">Багаж: 23 кг</span>
+                                </div>
+                            </div>
+                            <div class="flight-control">
+                                <div class="flight-control-item">
+                                    <span class="flight-control-cost">7800 ₽</span>
+                                    <span class="flight-control-places">Осталось мест: 180</span>
+                                </div>
+                                <div class="flight-control-item">
+                                    <a href="flight.html" class="btn">Подробнее</a>
+                                    <a href="#" class="btn btn-green">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flights-card">
+                            <div class="flight-img"><img src="imgs/flight1.png" alt="flight-img"></div>
+                            <div class="flight-card-container flight-info">
+                                <div class="flight-info-container">
+                                    <div>
+                                        <h3 class="cards-title">Москва — Санкт-Петербург</h3>
+                                        <span class="flight-info-inway">2025-12-15 • 09:30 - 11:00</span>
+                                    </div>
+                                    <span class="in-way">1ч 30м</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-class">Эконом</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-type">Тип: Пассажирский</span>
+                                    <span class="flight-type">Багаж: 23 кг</span>
+                                </div>
+                            </div>
+                            <div class="flight-control">
+                                <div class="flight-control-item">
+                                    <span class="flight-control-cost">7800 ₽</span>
+                                    <span class="flight-control-places">Осталось мест: 180</span>
+                                </div>
+                                <div class="flight-control-item">
+                                    <a href="flight.html" class="btn">Подробнее</a>
+                                    <a href="#" class="btn btn-green">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flights-card">
+                            <div class="flight-img"><img src="imgs/flight1.png" alt="flight-img"></div>
+                            <div class="flight-card-container flight-info">
+                                <div class="flight-info-container">
+                                    <div>
+                                        <h3 class="cards-title">Москва — Санкт-Петербург</h3>
+                                        <span class="flight-info-inway">2025-12-15 • 09:30 - 11:00</span>
+                                    </div>
+                                    <span class="in-way">1ч 30м</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-class">Эконом</span>
+                                </div>
+                                <div class="flight-info-container">
+                                    <span class="flight-type">Тип: Пассажирский</span>
+                                    <span class="flight-type">Багаж: 23 кг</span>
+                                </div>
+                            </div>
+                            <div class="flight-control">
+                                <div class="flight-control-item">
+                                    <span class="flight-control-cost">7800 ₽</span>
+                                    <span class="flight-control-places">Осталось мест: 180</span>
+                                </div>
+                                <div class="flight-control-item">
+                                    <a href="flight.html" class="btn">Подробнее</a>
+                                    <a href="#" class="btn btn-green">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </main>
+        <footer class="app-footer">
+            <div class="container footer-container">
+                <div class="footer-nav-container">
+                    <div class="footer-nav-item">
+                        <div class="app-logo">
+                            <a href="./"><img src="icons/app-logo.svg" alt="logo"></a>
+                        </div>
+                        <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
+                        <div class="footer-nav-social">
+                            <div class="social-item"><a href="#"><img src="icons/facebook.svg" alt="facebook" loading="lazy"></a></div>
+                            <div class="social-item"><a href="#"><img src="icons/instagram.svg" alt="instagram" loading="lazy"></a></div>
+                            <div class="social-item"><a href="#"><img src="icons/x.svg" alt="x" loading="lazy"></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Информация</h3>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Рейсы</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Контакты</h3>
+                        <ul>
+                            <li><span>📞</span><a href="tel:+7 (800) 123-45-67">+7 (800) 123-45-67</a></li>
+                            <li><span>✉</span><a href="mailto:info@skyjett.ru">info@skyjett.ru</a></li>
+                            <li><span>🏢</span>г. Москва, ул. Авиационная, 15</li>
+                            <li><span>🕒</span>Пн-Пт: 9:00 - 18:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Подписка</h3>
+                        <p>Подпишитесь на нашу рассылку, чтобы получать информацию о специальных предложениях и акциях.</p>
+                        <form class="footer-nav-subcription">
+                            <input type="email" placeholder="Ваш email">
+                            <button>→</button>
+                        </form>
+                    </div>
+                </div>
+                <p class="footer-sign">© 2025 SkyJett. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

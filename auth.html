@@ -3,67 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyJett - Вход</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/auth.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        
-        ym(101844372, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101844372" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9NP34SHMK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-F9NP34SHMK');
-    </script>
-    <script src="js/auth.js"></script>
+    <meta name="description" content="Войдите в свой аккаунт или зарегистрируйтесь, чтобы быстро бронировать рейсы и управлять своими заказами.">
+    <title>SkyJett — Вход</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <a class="auth__back wah_click" href="./" aria-label="Вернуться на главную">
-        <img src="icons/auth-back.svg" alt="назад">
-    </a>
-    <div class="auth__container">
-        <div class="auth__switch-box">
-            <button class="auth__switch-box__item sign-up active-link wah_click">Регистрация</button>
-            <button class="auth__switch-box__item sign-in wah_click">Вход</button>
-        </div>
-        <form class="auth__form__sign-up auth">
-            <input type="text" class="auth__form__input" name="name" placeholder="Имя" required>
-            <input type="email" class="auth__form__input" name="email" placeholder="e-mail" required>
-            <input type="tel" class="auth__form__input" name="tel" placeholder="Телефон" minlength="18" required>
-            <div class="auth__form__input-box">
-                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" minlength="4" maxlength="16" required>
-                <div class="auth__form__input-box__switch"><img src="icons/eye-close.svg" alt="скрыт"></div>
+    <div class="app">
+        <header class="app-header">
+            <div class="container header-container">
+                <div class="app-logo">
+                    <a href="./"><img src="icons/app-logo.svg" alt="logo" loading="lazy"></a>
+                </div>
+                <nav class="header-nav">
+                    <a href="./">Главная</a>
+                    <a href="flights.html">Рейсы</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="reviews.html">Отзывы</a>
+                </nav>
+                <div class="header-login">
+                    <a href="auth.html">Войти</a>
+                </div>
             </div>
-            <button type="submit" class="auth__form__submit wah_click">Регистрация</button>
-        </form>
-        <form class="auth__form__sign-in auth" style="display: none;">
-            <input type="email" class="auth__form__input" name="email" placeholder="e-mail" required>
-            <div class="auth__form__input-box">
-                <input type="password" class="auth__form__input" name="password" placeholder="*Пароль" minlength="4" maxlength="16" required>
-                <div class="auth__form__input-box__switch"><img src="icons/eye-close.svg" alt="скрыт"></div>
+        </header>
+        <main class="app-main"></main>
+        <footer class="app-footer">
+            <div class="container footer-container">
+                <div class="footer-nav-container">
+                    <div class="footer-nav-item">
+                        <div class="app-logo">
+                            <a href="./"><img src="icons/app-logo.svg" alt="logo"></a>
+                        </div>
+                        <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
+                        <div class="footer-nav-social">
+                            <div class="social-item"><a href="#"><img src="icons/facebook.svg" alt="facebook" loading="lazy"></a></div>
+                            <div class="social-item"><a href="#"><img src="icons/instagram.svg" alt="instagram" loading="lazy"></a></div>
+                            <div class="social-item"><a href="#"><img src="icons/x.svg" alt="x" loading="lazy"></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Информация</h3>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Рейсы</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Контакты</h3>
+                        <ul>
+                            <li><span>📞</span><a href="tel:+7 (800) 123-45-67">+7 (800) 123-45-67</a></li>
+                            <li><span>✉</span><a href="mailto:info@skyjett.ru">info@skyjett.ru</a></li>
+                            <li><span>🏢</span>г. Москва, ул. Авиационная, 15</li>
+                            <li><span>🕒</span>Пн-Пт: 9:00 - 18:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Подписка</h3>
+                        <p>Подпишитесь на нашу рассылку, чтобы получать информацию о специальных предложениях и акциях.</p>
+                        <form class="footer-nav-subcription">
+                            <input type="email" placeholder="Ваш email">
+                            <button>→</button>
+                        </form>
+                    </div>
+                </div>
+                <p class="footer-sign">© 2025 SkyJett. Все права защищены.</p>
             </div>
-            <button type="submit" class="auth__form__submit wah_click">Вход</button>
-        </form>
+        </footer>
     </div>
-    <div class="gradient-half"></div>
 </body>
 </html>
