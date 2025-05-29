@@ -1,75 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Войдите в свой аккаунт или зарегистрируйтесь, чтобы быстро бронировать рейсы и управлять своими заказами.">
     <title>SkyJett — Вход</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/auth.js"></script>
 </head>
 <body>
+    <!-- Начало -->
     <div class="app">
+        <!-- Шапка -->
         <header class="app-header">
-            <div class="container header-container">
-                <div class="app-logo">
-                    <a href="./"><img src="icons/app-logo.svg" alt="logo" loading="lazy"></a>
+            <div class="container container--header">
+                <a href="./" class="app-logo"><img src="icons/logo_w.svg" alt="SkyJett — логотип"></a>
+                <div class="header-actions">
+                    <nav class="header-nav">
+                        <a href="./">Главная</a>
+                        <a href="catalog.html">Каталог рейсов</a>
+                        <a href="services.html">Услуги</a>
+                        <a href="reviews.html">Отзывы</a>
+                    </nav>
+                    <a href="auth.html" class="btn btn--profile">Войти</a>
                 </div>
-                <nav class="header-nav">
-                    <a href="./">Главная</a>
-                    <a href="flights.html">Рейсы</a>
-                    <a href="services.html">Услуги</a>
-                    <a href="reviews.html">Отзывы</a>
-                </nav>
-                <div class="header-login">
-                    <a href="auth.html">Войти</a>
+                <div class="header-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </header>
-        <main class="app-main"></main>
+        <!-- Конец шапки -->
+
+        <!-- Основная часть -->
+        <main class="app-main">
+            <div class="container container--auth">
+                <section class="auth-section">
+                    <a href="./" class="link-btn">← На главную</a>
+                    <div class="auth-container">
+                        <div class="auth-toggle">
+                            <button class="auth-toggle-item sign-in active">Вход</button>
+                            <button class="auth-toggle-item sign-up">Регистрация</button>
+                        </div>
+                        <form action="#" class="auth-form login">
+                            <div class="auth-flex-col">
+                                <label for="login-email">Email</label>
+                                <input type="email" placeholder="your@email.com" id="login-email" name="email" required>
+                            </div>
+                            <div class="auth-flex-col">
+                                <label for="login-password">Пароль</label>
+                                <input type="password" placeholder="••••••••" id="login-password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn">Войти</button>
+                        </form>
+                        <form action="#" class="auth-form register hidden">
+                            <div class="auth-flex-col">
+                                <label for="register-name">Имя</label>
+                                <input type="text" placeholder="Иван Иванович" id="register-name" name="name" required>
+                            </div>
+                            <div class="auth-flex-col">
+                                <label for="register-email">Email</label>
+                                <input type="email" placeholder="your@email.com" id="register-email" name="email" required>
+                            </div>
+                            <div class="auth-flex-col">
+                                <label for="register-phone">Телефон</label>
+                                <input type="tel" placeholder="+7 (999) 123-45-67" id="register-phone" name="tel" required>
+                            </div>
+                            <div class="auth-flex-col">
+                                <label for="register-password">Пароль</label>
+                                <input type="password" placeholder="••••••••" id="register-password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Конец основной части -->
+
+        <!-- Подвал -->
         <footer class="app-footer">
-            <div class="container footer-container">
+            <div class="container container--footer">
                 <div class="footer-nav-container">
                     <div class="footer-nav-item">
-                        <div class="app-logo">
-                            <a href="./"><img src="icons/app-logo.svg" alt="logo"></a>
-                        </div>
+                        <a href="./" class="app-logo"><img src="icons/logo_w.svg" alt="SkyJett — логотип"></a>
                         <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
                         <div class="footer-nav-social">
-                            <div class="social-item"><a href="#"><img src="icons/facebook.svg" alt="facebook" loading="lazy"></a></div>
-                            <div class="social-item"><a href="#"><img src="icons/instagram.svg" alt="instagram" loading="lazy"></a></div>
-                            <div class="social-item"><a href="#"><img src="icons/x.svg" alt="x" loading="lazy"></a></div>
+                            <a href="#facebook"><img src="icons/fb.svg" alt="Facebook"></a>
+                            <a href="#X"><img src="icons/x.svg" alt="X"></a>
+                            <a href="#vk"><img src="icons/vk.svg" alt="VK"></a>
+                            <a href="#tg"><img src="icons/tg.svg" alt="Telegram"></a>
                         </div>
                     </div>
                     <div class="footer-nav-item">
                         <h3 class="footer-nav-title">Информация</h3>
                         <ul>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Рейсы</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#about">О компании</a></li>
+                            <li><a href="catalog.html">Рейсы</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="reviews.html">Отзывы</a></li>
                         </ul>
                     </div>
                     <div class="footer-nav-item">
                         <h3 class="footer-nav-title">Контакты</h3>
                         <ul>
-                            <li><span>📞</span><a href="tel:+7 (800) 123-45-67">+7 (800) 123-45-67</a></li>
-                            <li><span>✉</span><a href="mailto:info@skyjett.ru">info@skyjett.ru</a></li>
-                            <li><span>🏢</span>г. Москва, ул. Авиационная, 15</li>
-                            <li><span>🕒</span>Пн-Пт: 9:00 - 18:00</li>
+                            <li><span class="footer-nav-icon"><img src="icons/phone_sm_gr.svg" alt="Телефон"></span><a href="tel:+7 (800) 123-45-67">+7 (800) 123-45-67</a></li>
+                            <li><span class="footer-nav-icon"><img src="icons/email_sm_gr.svg" alt="Почта"></span><a href="mailto:info@skyjett.ru">info@skyjett.ru</a></li>
+                            <li><span class="footer-nav-icon"><img src="icons/office_sm_gr.svg" alt="Офис"></span>г. Москва, ул. Авиационная, 15</li>
+                            <li><span class="footer-nav-icon"><img src="icons/clocks_sm_gr.svg" alt="Часы"></span>Пн-Пт: 9:00 - 18:00</li>
                         </ul>
                     </div>
                     <div class="footer-nav-item">
                         <h3 class="footer-nav-title">Подписка</h3>
                         <p>Подпишитесь на нашу рассылку, чтобы получать информацию о специальных предложениях и акциях.</p>
-                        <form class="footer-nav-subcription">
+                        <form class="footer-nav-subcription" action="#">
                             <input type="email" placeholder="Ваш email">
-                            <button>→</button>
+                            <button aria-label="Подписаться на рассылку">→</button>
                         </form>
                     </div>
                 </div>
                 <p class="footer-sign">© 2025 SkyJett. Все права защищены.</p>
             </div>
         </footer>
+        <!-- Конец подвала -->
     </div>
+    <!-- Конец -->
 </body>
 </html>

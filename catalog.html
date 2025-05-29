@@ -1,80 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyJett - Каталог</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        
-        ym(101844372, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101844372" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9NP34SHMK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-F9NP34SHMK');
-    </script>
-    <script type="module" src="js/script.js"></script>
+    <meta name="description" content="Сравните доступные авиарейсы по вашему маршруту. Удобный фильтр, актуальные цены и быстрая бронь.">
+    <title>SkyJett — Каталог рейсов</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
+    <!-- Начало -->
     <div class="app">
-        <header class="container app__header">
-            <a href="./" class="app__header-logo" aria-label="Вернуться на главную">
-                <img src="icons/logo.svg" alt="логотип">
-            </a>
-            <nav class="app__header__nav">
-                <ul>
-                    <li class="app__header__nav-item"><a href="catalog.html">Каталог рейсов</a></li>
-                    <li class="app__header__nav-item"><a href="#portfolio">Портфолио услуг</a></li>
-                    <li class="app__header__nav-item" style="display: none;"><a href="#admin">Админ панель</a></li>
-                    <li class="app__header__nav-item app__header-profile">
-                        <a href="profile.html" aria-label="Профиль">
-                            <img src="icons/profile.svg" alt="профиль">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <!-- Шапка -->
+        <header class="app-header">
+            <div class="container container--header">
+                <a href="./" class="app-logo"><img src="icons/logo_w.svg" alt="SkyJett — логотип"></a>
+                <div class="header-actions">
+                    <nav class="header-nav">
+                        <a href="./">Главная</a>
+                        <a href="catalog.html">Каталог рейсов</a>
+                        <a href="services.html">Услуги</a>
+                        <a href="reviews.html">Отзывы</a>
+                    </nav>
+                    <a href="./auth.html" class="btn btn--profile">Войти</a>
+                </div>
+                <div class="header-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </header>
-        <main class="container catalog__main">
-            <div class="catalog__main__filter">
-                <div class="catalog__main__fliter__filter-modal">Фильтр</div>
-                <input type="text" class="catalog__main__fliter__input input-flight" placeholder="По названию">
-                <input type="number" class="catalog__main__fliter__input input-by" placeholder="От: 20 000₽">
-                <input type="number" class="catalog__main__fliter__input input-to" placeholder="До: 50 000₽">
-                <button class="catalog__main__fliter__submit">Фильтровать</button>
+        <!-- Конец шапки -->
+
+        <!-- Основная часть -->
+        <main class="app-main">
+            <div class="container container--main">
+                <section class="app-section app-section--flush flights-section">
+                    <h2 class="section-title">Каталог рейсов</h2>
+                    <section class="flights-filter">
+                        <div class="flights-filter-container">
+                            <h3>Поиск и фильтрация</h3>
+                            <div class="flights-filter-form">
+                                <div class="filter-flex">
+                                    <div class="filter-item">
+                                        <label for="from">Откуда</label>
+                                        <input type="text" placeholder="Город вылета" id="from">
+                                    </div>
+                                    <div class="filter-item">
+                                        <label for="to">Куда</label>
+                                        <input type="text" placeholder="Город прилета" id="to">
+                                    </div>
+                                    <div class="filter-item">
+                                        <label for="date">Дата</label>
+                                        <input type="date" id="date">
+                                    </div>
+                                </div>
+                                <div class="filter-flex">
+                                    <div class="filter-item">
+                                        <label for="type">Тип перевозки</label>
+                                        <select id="type">
+                                            <option value="all">Все типы</option>
+                                            <option value="passenger">Пассажирский</option>
+                                            <option value="cargo">Грузовой</option>
+                                            <option value="post">Почтовый</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter-item">
+                                        <label for="class">Класс</label>
+                                        <select id="class">
+                                            <option value="all">Все классы</option>
+                                            <option value="first">Первый</option>
+                                            <option value="business">Бизнес</option>
+                                            <option value="economy">Эконом</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="flights-catalog">
+                        <div class="flights-catalog-item">
+                            <div class="flights-card">
+                                <div class="flights-card-img"><img src="imgs/flight1.webp" alt="Рейс 1"></div>
+                                <div class="flights-card-info">
+                                    <div class="flights-info-flex">
+                                        <div class="flights-info-flex flights-info-flex--col">
+                                            <h3>Москва — Санкт-Петербург</h3>
+                                            <span class="card-time">2023-12-15 • 09:30 - 11:00</span>
+                                        </div>
+                                        <span class="btn btn--light flights-info-inway">1ч 30м</span>
+                                    </div>
+                                    <div class="flights-info-flex flights-info-flex--start">
+                                        <span class="flights-class">Эконом</span>
+                                        <span class="flights-class">Бизнес</span>
+                                        <span class="flights-class">Первый</span>
+                                    </div>
+                                    <div class="flights-info-flex flights-info-flex--start">
+                                        <span class="flights-type">Тип: Пассажирский</span>
+                                        <span class="flights-type">Багаж: 23 кг</span>
+                                    </div>
+                                </div>
+                                <div class="flights-card-actions">
+                                    <div class="actions-flex">
+                                        <span class="flights-price">5600 ₽</span>
+                                        <span class="flights-places">Осталось мест: 120</span>
+                                    </div>
+                                    <div class="actions-flex">
+                                        <a href="" class="btn">Подробнее</a>
+                                        <a href="" class="btn btn--green">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </div>
-            <div class="catalog__main__cards"></div>
         </main>
-        <footer class="app__footer">
-            <div class="app__footer__container">
-                <div class="app__footer__container__box"></div>
-                <span> 
-                    Designed by AeeAwe<br>
-                    © SkyJett 2025
-                </span>
+        <!-- Конец основной части -->
+
+        <!-- Подвал -->
+        <footer class="app-footer">
+            <div class="container container--footer">
+                <div class="footer-nav-container">
+                    <div class="footer-nav-item">
+                        <a href="./" class="app-logo"><img src="icons/logo_w.svg" alt="SkyJett — логотип"></a>
+                        <p>Ваш надежный партнер для комфортных и безопасных путешествий по всему миру.</p>
+                        <div class="footer-nav-social">
+                            <a href="#facebook"><img src="icons/fb.svg" alt="Facebook"></a>
+                            <a href="#X"><img src="icons/x.svg" alt="X"></a>
+                            <a href="#vk"><img src="icons/vk.svg" alt="VK"></a>
+                            <a href="#tg"><img src="icons/tg.svg" alt="Telegram"></a>
+                        </div>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Информация</h3>
+                        <ul>
+                            <li><a href="#about">О компании</a></li>
+                            <li><a href="catalog.html">Рейсы</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="reviews.html">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Контакты</h3>
+                        <ul>
+                            <li><span class="footer-nav-icon"><img src="icons/phone_sm_gr.svg" alt="Телефон"></span><a href="tel:+7 (800) 123-45-67">+7 (800) 123-45-67</a></li>
+                            <li><span class="footer-nav-icon"><img src="icons/email_sm_gr.svg" alt="Почта"></span><a href="mailto:info@skyjett.ru">info@skyjett.ru</a></li>
+                            <li><span class="footer-nav-icon"><img src="icons/office_sm_gr.svg" alt="Офис"></span>г. Москва, ул. Авиационная, 15</li>
+                            <li><span class="footer-nav-icon"><img src="icons/clocks_sm_gr.svg" alt="Часы"></span>Пн-Пт: 9:00 - 18:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h3 class="footer-nav-title">Подписка</h3>
+                        <p>Подпишитесь на нашу рассылку, чтобы получать информацию о специальных предложениях и акциях.</p>
+                        <form class="footer-nav-subcription" action="#">
+                            <input type="email" placeholder="Ваш email">
+                            <button aria-label="Подписаться на рассылку">→</button>
+                        </form>
+                    </div>
+                </div>
+                <p class="footer-sign">© 2025 SkyJett. Все права защищены.</p>
             </div>
-            <img src="icons/footer-sign.svg" alt="sign">
         </footer>
+        <!-- Конец подвала -->
     </div>
+    <!-- Конец -->
 </body>
 </html>
