@@ -11,9 +11,9 @@ if (localStorage.getItem("auth")){
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".auth__container");
-    const sign_up = document.querySelector(".auth__form__sign-up");
-    const sign_in = document.querySelector(".auth__form__sign-in");
+    const container = document.querySelector(".auth-container");
+    const sign_up = document.querySelector(".register");
+    const sign_in = document.querySelector(".login");
     sign_up.addEventListener("submit", e => {
         e.preventDefault();
         const name = sign_up.name.value;
@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const password = sign_up.password.value;
         if (name && email && phone && password){
             const users = JSON.parse(localStorage.getItem("users"));
+            console.log('users: ', users);
             if (users){
                 users.forEach(e => {
                     if (e.email == email || e.phone == phone){
@@ -33,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         return
                     }
                 });
-                users.append({name: name, email: email, phone: phone, password: password});
+                users.push({name: name, email: email, phone: phone, password: password});
                 localStorage.setItem("users", JSON.stringify(users));
                 localStorage.setItem("auth", JSON.stringify({name: name, email: email}));
                 location.href = "./";
@@ -75,39 +76,39 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-    const pass_input = document.querySelectorAll(".auth__form__input[name='password']");
-    const switch_inp = document.querySelectorAll(".auth__form__input-box__switch");
-    switch_inp[0].addEventListener("click", e => {
-        if (pass_input[0].type == "password"){
-            pass_input[0].type = "text";
-            switch_inp[0].children[0].src = "icons/eye-open.svg";
-            switch_inp[0].children[0].alt = "раскрыт";
-        }else {
-            pass_input[0].type = "password";
-            switch_inp[0].children[0].src = "icons/eye-close.svg";
-            switch_inp[0].children[0].alt = "скрыт";
-        };
-    });
-    switch_inp[1].addEventListener("click", e => {
-        if (pass_input[1].type == "password"){
-            pass_input[1].type = "text";
-            switch_inp[1].children[0].src = "icons/eye-open.svg";
-            switch_inp[1].children[0].alt = "раскрыт";
-        }else {
-            pass_input[1].type = "password";
-            switch_inp[1].children[0].src = "icons/eye-close.svg";
-            switch_inp[1].children[0].alt = "скрыт";
-        };
-    });
-    const auth__switch_box = document.querySelector(".auth__switch-box");
+    const pass_input = document.querySelectorAll(".auth-container input[name='password']");
+    // const switch_inp = document.querySelectorAll(".auth__form__input-box__switch");
+    // switch_inp[0].addEventListener("click", e => {
+    //     if (pass_input[0].type == "password"){
+    //         pass_input[0].type = "text";
+    //         switch_inp[0].children[0].src = "icons/eye-open.svg";
+    //         switch_inp[0].children[0].alt = "раскрыт";
+    //     }else {
+    //         pass_input[0].type = "password";
+    //         switch_inp[0].children[0].src = "icons/eye-close.svg";
+    //         switch_inp[0].children[0].alt = "скрыт";
+    //     };
+    // });
+    // switch_inp[1].addEventListener("click", e => {
+    //     if (pass_input[1].type == "password"){
+    //         pass_input[1].type = "text";
+    //         switch_inp[1].children[0].src = "icons/eye-open.svg";
+    //         switch_inp[1].children[0].alt = "раскрыт";
+    //     }else {
+    //         pass_input[1].type = "password";
+    //         switch_inp[1].children[0].src = "icons/eye-close.svg";
+    //         switch_inp[1].children[0].alt = "скрыт";
+    //     };
+    // });
+    const auth__switch_box = document.querySelector(".auth-toggle");
     auth__switch_box.addEventListener("click", e => {
         const target = e.target;
         if (target.classList.contains("sign-up")){
-            if (target.classList.contains("active-link")){
+            if (target.classList.contains("active")){
                 null;
             }else{
-                target.classList.add("active-link");
-                target.nextElementSibling.classList.remove("active-link");
+                target.classList.add("active");
+                target.previousElementSibling.classList.remove("active");
                 sign_in.style.display = "none";
                 sign_up.style.display = "flex";
                 if (container.lastElementChild.tagName == "P"){
@@ -115,11 +116,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             }
         }else if (target.classList.contains("sign-in")){
-            if (target.classList.contains("active-link")){
+            if (target.classList.contains("active")){
                 null;
             }else{
-                target.classList.add("active-link");
-                target.previousElementSibling.classList.remove("active-link");
+                target.classList.add("active");
+                target.nextElementSibling.classList.remove("active");
                 sign_in.style.display = "flex";
                 sign_up.style.display = "none";
                 if (container.lastElementChild.tagName == "P"){
@@ -149,7 +150,7 @@ window.addEventListener("DOMContentLoaded", () => {
         };
         if (type === 'blur' && target.value.length < 5) target.value = '';
     };
-    const phone_input = document.querySelector(".auth__form__input[name='tel']");
+    const phone_input = document.querySelector(".auth-form input[name='tel']");
     phone_input.addEventListener('input', mask);
     phone_input.addEventListener('focus', mask);
     phone_input.addEventListener('blur', mask);
